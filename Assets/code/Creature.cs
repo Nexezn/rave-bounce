@@ -11,6 +11,8 @@ public class Creature : MonoBehaviour
     public enum CreatureMovementType { tf, physics};
 
     [SerializeField] CreatureMovementType movementType = CreatureMovementType.tf;
+    public enum CreaturePerspective { topDown, sideScroll };
+    [SerializeField] CreaturePerspective perspectiveType = CreaturePerspective.topDown;
 
     [Header("Physics")]
     [SerializeField] LayerMask groundMask;
@@ -18,6 +20,7 @@ public class Creature : MonoBehaviour
     
     [Header("Flavor")]
     [SerializeField] string creatureName = "Rezzbian";
+    public GameObject body;
     [Header("Tracked Data")]
     [SerializeField] Vector3 homePosition = Vector3.zero;
     // Start is called before the first frame update
@@ -49,8 +52,17 @@ public class Creature : MonoBehaviour
 
     public void MoveCreatureRb(Vector3 direction)
     {
-        Vector3 currentVelocity = new Vector3(0, rb.velocity.y, 0);
+        Vector3 currentVelocity = Vector3.zero;
+        if(perspectiveType == CreaturePerspective.sideScroll){
+            currentVelocity = new Vector3(0, rb.velocity.y, 0);
+        }
+
         rb.velocity = (currentVelocity) + (direction * speed);
+        if(rb.velocity.x < 0){
+            //body.transform.localScale = new Vector3(-1,1,1);
+        }else if(rb.velocity.x > 0){
+            //body.transform.localScale = new Vector3(1,1,1);
+        }
         //rb.AddForce(direction * speed);
         //rb.MovePosition(transform.position + (direction * speed * Time.deltaTime))
     }
