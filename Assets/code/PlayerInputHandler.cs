@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-
+    [Header("References")]
     [SerializeField] Creature playerCreature;
-    //ProjectileThrower projectileThrower;
+    [SerializeField] GuestCheck guestCheker;
+    [SerializeField] Lock frontOfHouse;
     // Start is called before the first frame update
     void Start(){
         //projectileThrower = playerCreature.GetComponent<ProjectileThrower>();
@@ -41,7 +42,9 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.E)){
-            //projectileThrower.Launch(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            if (frontOfHouse.locked == true){
+                guestCheker.CheckGuest();
+            }
         }
 
         

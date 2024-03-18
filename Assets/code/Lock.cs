@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Lock : MonoBehaviour
 {
-
+    [Header("Attribute")]
     public bool locked = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void LockSpot(){
         locked = true;

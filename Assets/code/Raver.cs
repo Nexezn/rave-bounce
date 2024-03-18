@@ -14,12 +14,15 @@ public class Raver : MonoBehaviour
     private Transform target;
     private int pathIndex = 0;
     private float baseSpeed;
+    private GameObject temp;
     public bool greenLight = false;
     public bool redLight = false;
     
     // Start is called before the first frame update
     void Start()
     {
+        temp = GameObject.FindWithTag("LevelManage");
+        LM = temp.GetComponent<LevelManager>();
         baseSpeed = moveSpeed;
         target = LM.path[pathIndex];
         Debug.Log(LM.path[pathIndex]);
@@ -73,6 +76,10 @@ public class Raver : MonoBehaviour
 
     public void resetSpeed(){
         moveSpeed = baseSpeed;
+    }
+
+    public void setLevelManager(LevelManager manager){
+        LM = manager;
     }
 
     public void updateRedLight(bool decision){
