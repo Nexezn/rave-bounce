@@ -53,7 +53,6 @@ public class Raver : MonoBehaviour
             }
         }
         else{
-            Debug.Log("At front of house");
             if (greenLight == true){
                 pathIndex++;
             }
@@ -74,5 +73,13 @@ public class Raver : MonoBehaviour
 
     public void resetSpeed(){
         moveSpeed = baseSpeed;
+    }
+
+    public void updateRedLight(bool decision){
+        redLight = decision;
+    }
+
+    public void updateGreenLight(bool decision){
+        greenLight = decision;
     }
 }
