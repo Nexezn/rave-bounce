@@ -67,6 +67,13 @@ public class Raver : MonoBehaviour
             }
         }
     }
+
+    private void PopulateItems(){
+        int i;
+        for (i = 0; i < 8; i++){
+            
+        }
+    }
     private void FixedUpdate(){
         Vector2 direction = (target.position - transform.position).normalized;
 
