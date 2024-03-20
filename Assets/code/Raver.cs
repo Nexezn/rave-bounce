@@ -15,6 +15,9 @@ public class Raver : MonoBehaviour
     private int pathIndex = 0;
     private float baseSpeed;
     private GameObject temp;
+    public GameObject[] inventory;
+    public float value;
+    public float risk;
     public bool greenLight = false;
     public bool redLight = false;
     
