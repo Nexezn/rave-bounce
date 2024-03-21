@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5336777234893110305}
   m_Layer: 0
   m_Name: knife32
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,7 +189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f10c57a7a679064448bc9511d0bc1371, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbae1e32ea9411e479ac21b9c6a40ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detailMenu: {fileID: 3374143355504048}
   risk: 8
   value: 0
 --- !u!1 &2651203532249678392

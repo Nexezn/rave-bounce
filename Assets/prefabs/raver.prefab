@@ -163,6 +163,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2967345877327264222}
   LM: {fileID: 0}
+  objects: {fileID: 11400000, guid: d4d55e435ba04d44988eaee8b8113c45, type: 2}
   moveSpeed: 2
+  inventory: []
+  value: 0
+  risk: 0
   greenLight: 0
   redLight: 0

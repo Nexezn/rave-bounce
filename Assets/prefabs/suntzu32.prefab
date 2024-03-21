@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 3022291278136921340}
   m_Layer: 0
   m_Name: suntzu32
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -669,7 +669,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: a416c8b700c034d4c982086b8ac2d078, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -693,6 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbae1e32ea9411e479ac21b9c6a40ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detailMenu: {fileID: 159881617619285344}
   risk: 2
   value: 0
 --- !u!1 &6061090487597643331

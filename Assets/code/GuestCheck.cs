@@ -11,6 +11,7 @@ public class GuestCheck : MonoBehaviour
     [Header("Attributes")]
     public bool inspectKey = false;
     private Collider2D currentGuest;
+    private List<GameObject> tempList;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +29,8 @@ public class GuestCheck : MonoBehaviour
             currentGuest = other;
             Debug.Log("GUEST AT FOH.");
             checkGuestTooltip.SetActive(true);
-            //Use this code to provide decision.
-            //other.GetComponent<Raver>().updateRedLight(true);
+            //grab 
+            tempList = other.GetComponent<Raver>().GetGOList();
         }
     }
 
@@ -53,5 +54,9 @@ public class GuestCheck : MonoBehaviour
     public void Kick(){
         guestMenu.SetActive(false);
         currentGuest.GetComponent<Raver>().updateRedLight(true);
+    }
+
+    public List<GameObject> GetItemList(){
+        return tempList;
     }
 }

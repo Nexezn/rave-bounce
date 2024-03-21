@@ -7,6 +7,7 @@ public class Raver : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private LevelManager LM;
+    [SerializeField] private ItemsList objects;
 
 
     [Header("Attributes")]
@@ -15,7 +16,7 @@ public class Raver : MonoBehaviour
     private int pathIndex = 0;
     private float baseSpeed;
     private GameObject temp;
-    public GameObject[] inventory;
+    public List<GameObject> inventory = new List<GameObject>();
     public float value;
     public float risk;
     public bool greenLight = false;
@@ -24,10 +25,14 @@ public class Raver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Set color
+        GetComponent<SpriteRenderer>().color = Color.HSVToRGB(Random.Range(0f,1f),1.0f,1.0f);
+        //Replace this with a scriptable object to avoid using findwithtag.
         temp = GameObject.FindWithTag("LevelManage");
         LM = temp.GetComponent<LevelManager>();
         baseSpeed = moveSpeed;
         target = LM.path[pathIndex];
+        PopulateItems();
         Debug.Log(LM.path[pathIndex]);
     }
 
@@ -70,8 +75,10 @@ public class Raver : MonoBehaviour
 
     private void PopulateItems(){
         int i;
+        int choice;
         for (i = 0; i < 8; i++){
-            
+            choice = Random.Range(0, 8);
+            inventory.Add(objects.items[choice]);
         }
     }
     private void FixedUpdate(){
@@ -86,6 +93,10 @@ public class Raver : MonoBehaviour
 
     public void resetSpeed(){
         moveSpeed = baseSpeed;
+    }
+
+    public List<GameObject> GetGOList(){
+        return inventory;
     }
 
     public void setLevelManager(LevelManager manager){

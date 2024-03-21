@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7421044771299555229}
   m_Layer: 0
   m_Name: phone32
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d4a5c110c5ae99e448680da9dcc2e599, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbae1e32ea9411e479ac21b9c6a40ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detailMenu: {fileID: 8496827023316444403}
   risk: 1
   value: 5
 --- !u!1 &5665256215182543166
