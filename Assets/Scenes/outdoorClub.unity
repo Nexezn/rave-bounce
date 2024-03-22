@@ -417,6 +417,7 @@ MonoBehaviour:
   - {fileID: 902752249}
   - {fileID: 421972396}
   itemlist: []
+  convoText: {fileID: 950988300}
 --- !u!1 &166444467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,7 +2070,7 @@ GameObject:
   - component: {fileID: 950988301}
   - component: {fileID: 950988300}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: guestTalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2114,10 +2115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[EXMAPLE]  Finally i''ll be able to watch this DJ! So Excited! ^_^
-
-    (This
-    will be changed dynamically)'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

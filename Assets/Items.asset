@@ -22,3 +22,23 @@ MonoBehaviour:
   - {fileID: 5402925176048041016, guid: 742325db53e041343b814d66d9ebc1fd, type: 3}
   - {fileID: 6666836725934713688, guid: 6ba41bb372ef97b4db16d5b2f6216b1a, type: 3}
   - {fileID: 3289249028116703809, guid: 13e1acda18d2d6049b6a3a2f477dd90e, type: 3}
+  GoodTexts:
+  - Finally! I've been wanting to watch this DJ!
+  - TECHNO TECHNO TECHNO TECHNO!!!!
+  - Doors open at 9:00 right?
+  - Heyyyyyy!
+  - Drove 4 hours to be here tonight!
+  - Is there water available?
+  - Is this where the party's at?
+  - Do Hydropacks need to be empty?
+  - LETSSSS GOOOOOOOO
+  - Im gonna be headbanging like CRAZY!
+  BadTexts:
+  - ...
+  - Hey...
+  - Here's my ticket.
+  - Do you like your job?
+  - I want to speak to your manager.
+  - Ehhh.
+  - Puro 956!!!
+  - Tickets are getting really expensive, for this!?

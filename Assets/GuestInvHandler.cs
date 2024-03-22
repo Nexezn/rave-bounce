@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GuestInvHandler : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class GuestInvHandler : MonoBehaviour
     [SerializeField] Transform[] location;
     [SerializeField] GameObject[] locGO; 
     [SerializeField] private List<GameObject> itemlist;
+    [SerializeField] TextMeshProUGUI convoText;
     private GameObject temp;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,7 @@ public class GuestInvHandler : MonoBehaviour
             temp = Instantiate(itemlist[i], location[i].position, location[i].rotation);
             locGO[i].GetComponent<Slot>().SetCurItem(temp.GetComponent<item>());
         }
+        convoText.text = gc.GetConvo();
     }
 
     void OnDisable(){

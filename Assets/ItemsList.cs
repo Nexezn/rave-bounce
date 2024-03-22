@@ -6,4 +6,6 @@ using UnityEngine;
 public class ItemsList : ScriptableObject
 {
     public GameObject[] items;
+    public string[] GoodTexts;
+    public string[] BadTexts;
 }

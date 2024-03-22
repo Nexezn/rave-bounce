@@ -12,6 +12,7 @@ public class GuestCheck : MonoBehaviour
     public bool inspectKey = false;
     private Collider2D currentGuest;
     private List<GameObject> tempList;
+    private string tempConvo;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class GuestCheck : MonoBehaviour
             checkGuestTooltip.SetActive(true);
             //grab 
             tempList = other.GetComponent<Raver>().GetGOList();
+            tempConvo = other.GetComponent<Raver>().conversation;
         }
     }
 
@@ -58,5 +60,9 @@ public class GuestCheck : MonoBehaviour
 
     public List<GameObject> GetItemList(){
         return tempList;
+    }
+
+    public string GetConvo(){
+        return tempConvo;
     }
 }

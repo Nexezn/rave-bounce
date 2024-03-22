@@ -17,6 +17,7 @@ public class Raver : MonoBehaviour
     private float baseSpeed;
     private GameObject temp;
     public List<GameObject> inventory = new List<GameObject>();
+    public string conversation;
     public float value;
     public float risk;
     public bool greenLight = false;
@@ -33,6 +34,7 @@ public class Raver : MonoBehaviour
         baseSpeed = moveSpeed;
         target = LM.path[pathIndex];
         PopulateItems();
+        PopulateConversation();
         Debug.Log(LM.path[pathIndex]);
     }
 
@@ -79,6 +81,14 @@ public class Raver : MonoBehaviour
         for (i = 0; i < 8; i++){
             choice = Random.Range(0, 8);
             inventory.Add(objects.items[choice]);
+        }
+    }
+
+    private void PopulateConversation(){
+        int choice;
+        for(int i = 0; i < objects.GoodTexts.Length; i++){
+            choice = Random.Range(0, objects.GoodTexts.Length);
+            conversation = objects.GoodTexts[choice];
         }
     }
     private void FixedUpdate(){
