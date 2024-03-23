@@ -13,6 +13,8 @@ public class GuestCheck : MonoBehaviour
     private Collider2D currentGuest;
     private List<GameObject> tempList;
     private string tempConvo;
+    private float tempRisk;
+    private float tempValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class GuestCheck : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
+
         if (other.GetComponent<Raver>() != null){
             currentGuest = other;
             Debug.Log("GUEST AT FOH.");
@@ -33,6 +36,8 @@ public class GuestCheck : MonoBehaviour
             //grab 
             tempList = other.GetComponent<Raver>().GetGOList();
             tempConvo = other.GetComponent<Raver>().conversation;
+            tempRisk = other.GetComponent<Raver>().risk;
+            tempValue = other.GetComponent<Raver>().value;
         }
     }
 
@@ -64,5 +69,13 @@ public class GuestCheck : MonoBehaviour
 
     public string GetConvo(){
         return tempConvo;
+    }
+
+    public float GetRisk(){
+        return tempRisk;
+    }
+
+    public float GetValue(){
+        return tempValue;
     }
 }

@@ -81,6 +81,9 @@ public class Raver : MonoBehaviour
         for (i = 0; i < 8; i++){
             choice = Random.Range(0, 8);
             inventory.Add(objects.items[choice]);
+            //Figuring out Value and risk from items assigned.
+            value += objects.items[choice].GetComponent<item>().value;
+            risk += objects.items[choice].GetComponent<item>().risk;
         }
     }
 
@@ -96,6 +99,7 @@ public class Raver : MonoBehaviour
 
         rb.velocity = direction * moveSpeed;
     }
+    //Getters and Setters down here. 
 
     public void updateSpeed(float newSpeed){
         moveSpeed = newSpeed;

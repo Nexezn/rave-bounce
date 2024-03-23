@@ -8,6 +8,7 @@ public class GuestSpawner : MonoBehaviour
     [SerializeField] private GameObject raverPrefab;
     [SerializeField] private LevelManager lm;
     [SerializeField] private Lock nextPoint;
+    
     [Header("Attribute")]
     [SerializeField] private int toSpawn;
     [SerializeField] private bool stopSpawning;
